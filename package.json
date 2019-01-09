@@ -8,7 +8,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "yarn test:integration",
-    "test:integration": "mocha --reporter mocha-jenkins-reporter dist/integration-tests/*.spec.js"
+    "test:integration": "mocha --require source-map-support/register dist --reporter mocha-jenkins-reporter dist/integration-tests/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
     "mocha-jenkins-reporter": "^0.4.1",
+    "source-map-support": "^0.5.9",
     "ts-loader": "^5.3.0",
     "tslint": "^5.11.0",
     "tslint-language-service": "^0.9.9",
